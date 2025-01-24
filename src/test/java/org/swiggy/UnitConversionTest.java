@@ -9,4 +9,9 @@ class UnitConversionTest {
     public void testConvertLitreToMilliLitreReturnExceptionWhenInputMinus1() {
         assertThrows(IllegalArgumentException.class, () -> {new UnitConversion(-1);});
     }
+
+    @Test
+    public void testConvertLitreToMilliLitreReturnExceptionWhenInputMinus100() {
+        assertThrows(IllegalArgumentException.class, () -> {new UnitConversion(-100);});
+    }
 }
