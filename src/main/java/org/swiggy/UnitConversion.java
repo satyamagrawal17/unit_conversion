@@ -8,4 +8,8 @@ public class UnitConversion {
         }
         this.value = value;
     }
+
+    public double convertLitreToMilliLitre() {
+        return 0;
+    }
 }
