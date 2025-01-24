@@ -20,4 +20,11 @@ class UnitConversionTest {
         double result = unitConversion.convertLitreToMilliLitre();
         assertEquals(0, result);
     }
+
+    @Test
+    public void testConvertLitreToMilliLitreReturn5000WhenInput5() {
+        UnitConversion unitConversion = new UnitConversion(5);
+        double result = unitConversion.convertLitreToMilliLitre();
+        assertEquals(5000, result);
+    }
 }

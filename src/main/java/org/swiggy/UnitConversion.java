@@ -10,6 +10,6 @@ public class UnitConversion {
     }
 
     public double convertLitreToMilliLitre() {
-        return 0;
+        return value * 1000;
     }
 }
