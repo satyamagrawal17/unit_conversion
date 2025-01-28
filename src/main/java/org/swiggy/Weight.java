@@ -1,6 +1,6 @@
 package org.swiggy;
 
-public class Weight {
+public class Weight implements Measurement {
     private final double quantity;
     private final WeightUnit unit;
 
@@ -12,6 +12,7 @@ public class Weight {
         this.unit = unit;
     }
 
+    @Override
     public Weight convertTo(Unit toUnit) {
         return new Weight((WeightUnit.GRAM.value / unit.value) * toUnit.getConversionFactor() * quantity, (WeightUnit) toUnit);
     }

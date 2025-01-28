@@ -1,6 +1,6 @@
 package org.swiggy;
 
-public class Volume {
+public class Volume implements Measurement {
     private final double quantity;
     private final VolumeUnit unit;
     public Volume(double quantity, VolumeUnit unit) {
@@ -11,6 +11,7 @@ public class Volume {
         this.unit = unit;
     }
 
+    @Override
     public Volume convertTo(Unit toUnit) {
         return new Volume((VolumeUnit.LITRE.value / unit.value) * toUnit.getConversionFactor() * quantity, (VolumeUnit) toUnit);
     }
