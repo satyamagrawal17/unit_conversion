@@ -5,5 +5,6 @@ public enum UnitType {
     MILLILITRE,
     KILOLITRE,
     DECALITRE,
+    DECILITRE,
     CENTILITRE
 }
