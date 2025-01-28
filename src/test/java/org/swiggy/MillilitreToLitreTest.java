@@ -23,4 +23,18 @@ class MillilitreToLitreTest {
         assertEquals(0, result);
     }
 
+    @Test
+    public void testConvertMilliLitreToLitreReturn5WhenInput5000() {
+        UnitConversion millilitreToLitre = new MillilitreToLitre(5000);
+        double result = millilitreToLitre.convert();
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testConvertMilliLitreToLitreReturn55WhenInput55000() {
+        UnitConversion millilitreToLitre = new MillilitreToLitre(55000);
+        double result = millilitreToLitre.convert();
+        assertEquals(55, result);
+    }
+
 }

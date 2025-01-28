@@ -5,4 +5,9 @@ public class MillilitreToLitre extends UnitConversion {
         super(value, UnitType.MILLILITRE, UnitType.LITRE);
     }
 
+    @Override
+    public double convert() {
+        return value / 1000;
+    }
+
 }
