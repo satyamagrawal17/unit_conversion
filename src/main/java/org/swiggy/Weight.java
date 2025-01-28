@@ -1,31 +1,13 @@
 package org.swiggy;
 
-public class Weight implements Measurement {
-    private final double quantity;
-    private final WeightUnit unit;
+public class Weight extends Measurement {
 
-    public Weight(double quantity, WeightUnit unit) {
-        if(quantity < 0) {
-            throw new IllegalArgumentException();
-        }
-        this.quantity = quantity;
-        this.unit = unit;
+    public Weight(double quantity, Unit unit) {
+        super(quantity, unit);
     }
 
-    @Override
     public Weight convertTo(Unit toUnit) {
-        return new Weight((WeightUnit.GRAM.value / unit.value) * toUnit.getConversionFactor() * quantity, (WeightUnit) toUnit);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(obj == this) {
-            return true;
-        }
-        if(!(obj instanceof Weight)) {
-            return false;
-        }
-        Weight weight = (Weight) obj;
-        return weight.unit == unit && weight.quantity == quantity;
+        Measurement result = super.convertTo(toUnit);
+        return new Weight(result.quantity, result.unit);
     }
 }
