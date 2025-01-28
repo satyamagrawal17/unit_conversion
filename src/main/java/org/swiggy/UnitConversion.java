@@ -1,6 +1,6 @@
 package org.swiggy;
 
 public interface UnitConversion {
-    public double convert();
+    public double convertTo();
 
 }

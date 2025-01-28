@@ -13,7 +13,7 @@ public class LitreToMillilitre implements UnitConversion {
         this.toUnitType = UnitType.MILLILITRE;
     }
     @Override
-    public double convert() {
+    public double convertTo() {
         return value * 1000;
     }
 }

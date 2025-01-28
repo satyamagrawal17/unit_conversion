@@ -14,8 +14,8 @@ public class LitreToKilolitre implements UnitConversion {
         this.toUnitType = UnitType.KILOLITRE;
     }
     @Override
-    public double convert() {
-        return 0;
+    public double convertTo() {
+        return value / 1000;
     }
 
 }

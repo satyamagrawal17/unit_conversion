@@ -14,7 +14,7 @@ public class MillilitreToLitre implements UnitConversion {
     }
 
     @Override
-    public double convert() {
+    public double convertTo() {
         return value / 1000;
     }
 
