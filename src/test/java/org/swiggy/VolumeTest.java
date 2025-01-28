@@ -12,7 +12,7 @@ class VolumeTest {
     }
 
     @Test
-    public void testVolumeLToMLReturnExceptionWhenInput0() {
+    public void testVolumeLToMLReturn0WhenInput0() {
         Volume volume = new Volume(0, VolumeUnit.LITRE);
         Volume result = volume.convertTo(VolumeUnit.MILLILITRE);
         Volume expected = new Volume(0, VolumeUnit.MILLILITRE);
@@ -42,7 +42,7 @@ class VolumeTest {
     }
 
     @Test
-    public void testVolumeMLToDLReturnExceptionWhenInput0() {
+    public void testVolumeMLToDLReturn0WhenInput0() {
         Volume volume = new Volume(0, VolumeUnit.MILLILITRE);
         Volume result = volume.convertTo(VolumeUnit.DECALITRE);
         Volume expected = new Volume(0, VolumeUnit.DECALITRE);
