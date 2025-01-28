@@ -1,16 +1,21 @@
 package org.swiggy;
 
-public class UnitConversion {
-    private final double value;
-    public UnitConversion(double value) {
+public class UnitConversion implements AbstractConversion {
+    protected final double value;
+    private final UnitType fromUnitType;
+    private final UnitType toUnitType;
+
+    public UnitConversion(double value, UnitType fromUnitType, UnitType toUnitType) {
         if(value < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Value cannot be negative");
         }
         this.value = value;
+        this.fromUnitType = fromUnitType;
+        this.toUnitType = toUnitType;
     }
 
-    public double convertLitreToMilliLitre() {
-        return value * 1000;
+    @Override
+    public double convert() {
+        return value;
     }
-
 }
