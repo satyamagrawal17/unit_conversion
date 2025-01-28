@@ -37,4 +37,11 @@ class MillilitreToLitreTest {
         assertEquals(55, result);
     }
 
+    @Test
+    public void testConvertMilliLitreToLitreReturn11Point55WhenInput11550() {
+        UnitConversion millilitreToLitre = new MillilitreToLitre(11550);
+        double result = millilitreToLitre.convert();
+        assertEquals(11.55, result);
+    }
+
 }
