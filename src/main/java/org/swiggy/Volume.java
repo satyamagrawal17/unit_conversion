@@ -11,8 +11,8 @@ public class Volume {
         this.unit = unit;
     }
 
-    public Volume convertTo(VolumeUnit toUnit) {
-        return new Volume((VolumeUnit.LITRE.value / unit.value) * toUnit.value * quantity, toUnit);
+    public Volume convertTo(Unit toUnit) {
+        return new Volume((VolumeUnit.LITRE.value / unit.value) * toUnit.getConversionFactor() * quantity, (VolumeUnit) toUnit);
     }
 
     @Override

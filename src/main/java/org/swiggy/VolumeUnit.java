@@ -1,6 +1,6 @@
 package org.swiggy;
 
-public enum VolumeUnit {
+public enum VolumeUnit implements Unit {
     LITRE(1),
     MILLILITRE(1000),
     KILOLITRE(0.001),
@@ -11,5 +11,9 @@ public enum VolumeUnit {
     public final double value;
     VolumeUnit(double value) {
         this.value = value;
+    }
+
+    public double getConversionFactor() {
+        return value;
     }
 }

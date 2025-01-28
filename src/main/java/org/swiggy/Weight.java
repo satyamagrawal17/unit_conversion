@@ -12,8 +12,8 @@ public class Weight {
         this.unit = unit;
     }
 
-    public Weight convertTo(WeightUnit weightUnit) {
-        return new Weight(0, weightUnit);
+    public Weight convertTo(Unit toUnit) {
+        return new Weight((WeightUnit.GRAM.value / unit.value) * toUnit.getConversionFactor() * quantity, (WeightUnit) toUnit);
     }
 
     @Override

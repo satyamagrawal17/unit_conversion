@@ -17,4 +17,14 @@ public class WeightTest {
         Weight expected = new Weight(0, WeightUnit.MILLIGRAM);
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testWeightGmToMGmReturn5000WhenInput5() {
+        Weight weight = new Weight(5, WeightUnit.GRAM);
+        Weight result = weight.convertTo(WeightUnit.MILLIGRAM);
+        Weight expected = new Weight(5000, WeightUnit.MILLIGRAM);
+        assertEquals(expected, result);
+    }
+
+
 }
